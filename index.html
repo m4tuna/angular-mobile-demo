@@ -1,0 +1,98 @@
+<!doctype html>
+<html ng-app="DemoApp">
+    <head>
+        <title>AngularJS mobile app demo</title>
+        <meta name="viewport" content="target-densitydpi=200, width=480, user-scalable=no, maximum-scale=1.0">
+        <link href="app.css" rel="stylesheet" type="text/css" />
+        <link href="mobile-nav.css" rel="stylesheet" type="text/css" />
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+        <script src="mobile-nav.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-controller="MainCtrl">
+        <div id="container">
+            <a href="https://github.com/revolunet/angular-mobile-demo"><img style="z-index:100; position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+            <header>
+                <a ng-tap="$navigate.go('/', 'slide', true)">HOME</a>
+                - 
+                <a ng-tap="$navigate.go('/modal', 'modal')">MODAL</a>
+            </header>
+            <div class="content">
+
+                <mobile-view></mobile-view>
+            </div>
+            <footer>App Footer</footer>
+        </div>
+    </body>
+
+    <script type="text/ng-template" id="/partials/page.html"> 
+        <div class="page" style='text-align:center'>
+            <h3>This is page {{ page }}</h3>
+            <a ng-tap="$navigate.back()">BACK</a>
+            <br><br>
+            <img height="200" ng-src="http://lorempixel.com/400/200/cats/{{ page % 10 }}/">
+            <br><br>
+            <a ng-tap="$navigate.go('/page/' + (page + 1))">go to page {{ page + 1 }}</a>
+        </div>
+    </script>
+
+    <script type="text/ng-template" id="/partials/modal.html"> 
+        <div class="page modal" style='text-align:center'   >
+            Sample modal<br><br><br>
+            <a class="button" ng-tap="$navigate.back()">Close modal</a>
+        </div>
+    </script>
+
+    <script type="text/ng-template" id="/partials/home.html"> 
+        <div class="page">
+            <div class="intro-title">Angular mobile app demo</div>
+
+            Experimental demo of a AngularJS app using <a href='https://github.com/ajoslin/angular-mobile-nav'>angular-mobile-nav</a> for transitions (webkit only).
+            <br><br>
+
+            <div style="text-align:center">
+                sample bindings : 
+                <br><br>
+                <input type="range"  min="0" max="100" ng-model="range"/> slider value: {{ range }}
+                <br><br>
+                <button class="demo" ng-tap="clicks = clicks + 1">clicks : {{ clicks }}</button>
+                <br><br>
+                range x clicks = {{ range * clicks }}
+            </div>
+
+            <br>
+
+            Now, go to <a ng-tap="$navigate.go('/page/1')">go to page 1</a>
+
+            <br><br>
+
+            Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+            <br><br>
+            Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+            <br><br>
+            Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+            <br><br>
+            Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+            <br><br>
+            Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+            <br><br>
+            Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+            <br><br>
+            Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+            <br><br>
+            Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+            <br><br>
+            Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+            <br><br>
+            Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+            <br><br>
+            Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+            <br><br>
+            Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+            <br><br>
+            Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+        </div>
+
+    </script>
+
+</html>
